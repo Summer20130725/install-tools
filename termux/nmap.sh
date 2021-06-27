@@ -26,14 +26,19 @@ printf "\n\t\t\033[36m开始进入安装默认等待5s\033[0m\n"
 
 sleep 5s
 clear
-
+#New Installer
 apt update && apt upgrade -y
-apt install openssl openssl-tool libssh libssh2 liblua liblua52 libluajit make libnet libpcap git autoconf -y
-apt install python2 python clang gdb -y
+apt install nmap -y
 
-git clone https://github.com/nmap/nmap $PREFIX/opt/nmap/
-cd $PREFIX/opt/nmap/
-./configure
-make && make install
+#Old Installer
+
+#apt update && apt upgrade -y
+#apt install openssl openssl-tool libssh libssh2 liblua liblua52 libluajit make libnet libpcap git autoconf -y
+#apt install python2 python clang gdb -y
+
+#git clone https://github.com/nmap/nmap $PREFIX/opt/nmap/
+#cd $PREFIX/opt/nmap/
+#./configure
+#make && make install
 
 printf "\t\t\033[36m完成：$TIME\033[0m\n"
